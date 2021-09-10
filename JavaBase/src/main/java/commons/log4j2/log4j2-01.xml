@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	最简单的配置
+	
+		%d{HH:mm:ss.SSS} 表示输出到毫秒的时间
+		%t 输出当前线程名称
+		%-5level 输出日志级别，-5表示左对齐并且固定输出5个字符，如果不足在右边补0
+		%logger 输出logger名称，因为Root Logger没有名称，所以没有输出
+		%msg 日志文本
+		%n 换行
+		
+		其他常用的占位符有：
+		%F 输出所在的类文件名，如Log4j2Test.java
+		%L 输出行号
+		%M 输出所在方法名
+		%l 输出语句所在的行数, 包括类名、方法名、文件名、行数	
+-->
+<Configuration status="WARN">  
+	<!-- 输出源配置 -->
+    <Appenders>  
+    	<!-- 控制台配置 -->
+        <Console name="Console" target="SYSTEM_OUT">
+        	<!-- 日志输出格式 -->  
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />  
+        </Console>  
+
+		<!-- 文件日志配置 -->
+        <File name="FileAppender" fileName="F:/JAVA_WorkSpace/JavaBase/src/commons/log4j2/log4j2-01.log">  
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />  
+        </File>  
+
+        <!-- 异步输出 -->
+        <Async name="AsyncAppender">
+        	<!-- 将文件日志异步输出 -->
+        	<AppenderRef ref="FileAppender"/>
+        </Async>        
+    </Appenders>  
+
+	<!-- 日志器配置 -->
+    <Loggers>  
+    	<!-- root,默认logger配置 日志级别 info -->
+        <Root level="info">
+        	<!-- 输出位置为控制台 -->  
+            <AppenderRef ref="Console" />  
+            <!-- 输出位置为文件日志 -->
+            <AppenderRef ref="FileAppender" />
+        </Root>  
+        
+        <!-- 自定义logger配置 , name一般与包名一致 -->
+        <Logger name="mylog" level="all" additivity="true">
+        	<!-- 采用异步日志输出 -->  
+            <AppenderRef ref="AsyncAppender" />  
+        </Logger>        
+    </Loggers>  
+</Configuration>

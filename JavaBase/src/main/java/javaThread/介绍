@@ -1,0 +1,19 @@
+进程
+	是程序执行过程,持有资源和线程
+线程
+	程序的最小的执行单元,共享进程的资源
+	分时与抢占完成CPU间的线程分配
+实现方法
+	继承Thread类或实现Runnable的,重写run方法
+
+方法:
+	获取线程名称：getName();
+	取得当前线程对象：currentThread();
+	判断是否启动：isAlive();
+	强行运行：join();
+	线程休眠：sleep();
+	线程礼让：yield();
+
+互斥与同步
+	wait()	notify()   notifyAll()
+	

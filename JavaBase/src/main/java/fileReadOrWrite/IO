@@ -1,0 +1,46 @@
+字节流
+	1.字节流,实现InputStream或者OutputStream抽象类
+	2.当读到结尾的时候返回-1
+	3.输入流基本方法
+		int b = in.read();			读取一个字符的无符号填充到低八位
+		in.read(byte[] buff)		读取字节到字节数组
+		in.read(byte[] buff,int start,int size)	读取文件到开始和长度指定的字节数组中
+	4.输出流基本方法
+		out.write(int b)			写出一个byte到低八位
+		out.write(byte[] buff)		写入字节到字节数组
+		out.write(byte[] buff,int start,int size)字节写入到开始和长度指定的字节数组中
+	5.FileInputSteam	继承了父类,对文件进行读取
+	6.FileOutputSteam	继承了父类,对文件进行写入
+	7.DataOutputStream/DataInputSteam 对流功能进行扩展,更加方便的读取int,long,字符等类型数据
+	8.BufferedInputSteam/BufferedOutputStream	对文件提供了带缓冲区的操作 ,提高了IO的性能
+	
+字符流
+	文本和文本文件,操作的是文本文件
+	java的文本char是16位无符号整数,是字符的unicode的编码,双字节编码
+	java的文件是一组一组的字节数组序列
+	文本文件是文本序列按照某种编码方案(utf-8,utf-16be)序列化为字节序列的结果
+	(Read/Writer)
+	字符的处理,一次处理一个字符,底部仍然是基本的字节序列
+	字符流的基本实现:
+		InputStreamReader:	实现byte流解析为char流,按照编码解析
+		OutputStreamWriter:	提供char流解析为byte流,按照编码解析
+	文件读取写入:
+		FileReader:文件读取,不能指定编码格式
+		FileWriter:文件写入,可以追加内容输出
+	字符流过滤器
+		BufferedReader:-->readLine	一次读取一行
+		BufferedWriter/PrintWrite	一次写入一行
+
+对象地序列化与反序列化
+	1.对象序列化,就是将Object转换为byte序列.反之叫反序列化
+	2.序列化流:
+		ObjectOutputStream:writeObject
+	3.反序列化流:
+		ObjectInputStream:readObject
+	4.序列化接口
+		Serializable:对象必须实现该序列化接口,才能进行序列化
+	5.忽略序列化
+		transient:修饰后不会进行序列化和表字段对应	
+	6.序列化中子类和父类的调用的
+		父类实现序列化接口后,其子类后可以进行序列化
+		对子类对象进行反序列化,如果其父类没有实现序列化接口,那么父类的构造函数将会被调用	

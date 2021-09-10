@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bookstore>
+	<book id="1">
+		<name>冰与火之歌</name>
+		<author>乔治马丁</author>
+		<year>2014</year>
+		<price>98$</price>
+	</book>
+	
+	<book id="2">
+		<name>格林童话</name>
+		<year>2015</year>
+		<price>68$</price>
+	</book>
+	
+	<book id="3">
+		<name>Spring指南</name>
+		<year>2017</year>
+		<price>10$</price>
+		<language>English</language>
+	</book>
+</bookstore>

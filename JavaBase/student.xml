@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns3:student xmlns:ns2="www.jionjion.top/java/example/bean/name" xmlns:ns3="www.jionjion.top/java/example/bean" id="1">
+    <ns2:name>Jion</ns2:name>
+    <age>23.5</age>
+    <address>上海</address>
+    <postcode>1000</postcode>
+    <birthday>2019-01-01</birthday>
+</ns3:student>
