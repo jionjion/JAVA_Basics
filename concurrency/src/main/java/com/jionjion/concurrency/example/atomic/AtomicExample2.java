@@ -1,0 +1,76 @@
+package com.jionjion.concurrency.example.atomic;
+
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Semaphore;
+import java.util.concurrent.atomic.AtomicInteger;
+
+
+/**
+ * 	原子性
+ * 	使用Atomic工具包,将类转为线程安全
+ * 		底层实现	通过判断传入修改的对象字段和修改值,与当前系统底层内存中保存者的内存值进行比较,
+ * 					一致则修改,否则重复获取当前共享内存中的值,再次比较,直到一致则修改
+ * 	
+ */
+public class AtomicExample2 {
+
+	//请求次数
+	public static int clientTotal = 5000;
+	
+	//线程
+	public static int threadTotal = 20;
+
+	//定义业务参数,使用工具包修饰
+	public static AtomicInteger sum = new AtomicInteger(0);
+	
+	//业务方法,使用工具包修饰
+	public static void add() {
+		sum.incrementAndGet();	//先自增,再获取值
+//		sum.getAndIncrement();	//先获取,再自增
+	}
+	
+	public static void main(String[] args) {
+		
+		//线程池
+		ExecutorService executorService = Executors.newCachedThreadPool();
+		
+		//信号量,允许并发数目
+		Semaphore semaphore = new Semaphore(threadTotal);
+		
+		//计数器
+		CountDownLatch countDownLatch = new CountDownLatch(clientTotal);
+		
+		//将每个线程放入线程池
+		for (int i = 0; i < clientTotal; i++) {
+			//执行函数,这里采用匿名函数写法
+			executorService.execute(() -> {
+				try {
+					//是否允许执行
+					semaphore.acquire();
+					add();
+					//释放进程
+					semaphore.release();
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+				
+				//执行完成后,计数-1
+				countDownLatch.countDown();
+			});
+		}
+		
+		try {
+			//线程都归零,结束
+			countDownLatch.await();
+			//结束
+			executorService.shutdown();
+			System.out.println("执行总次数:" + sum.get());
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+	
+
+}
