@@ -1,6 +1,6 @@
 package concurrency.controller;
 
-import com.jionjion.concurrency.filter.ThreadInfo;
+import concurrency.filter.ThreadInfo;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
