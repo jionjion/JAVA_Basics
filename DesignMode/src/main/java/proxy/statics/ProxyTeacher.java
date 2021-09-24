@@ -10,6 +10,7 @@ public class ProxyTeacher implements Teacher{
     private final Teacher teacher = new MathTeacher();
 
     /** 代理类,方法 */
+    @Override
     public void tell() {
         System.out.println("代理类执行...");
         teacher.tell();

@@ -10,6 +10,7 @@ public class VoltageAdapter implements Voltage5V {
     private Voltage220V voltage220V = new Voltage220V();
 
     /** 适配器方法 */
+    @Override
     public int output5V() {
         // 创建父类,并调用
         int output220V = voltage220V.output220V();

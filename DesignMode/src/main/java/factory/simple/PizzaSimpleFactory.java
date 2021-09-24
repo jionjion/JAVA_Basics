@@ -18,10 +18,10 @@ public class PizzaSimpleFactory {
     public Pizza createPizza(String type) {
         Pizza pizza = null;
         System.out.println(type);
-        if (type.equalsIgnoreCase("cheese")) {
+        if ("cheese".equalsIgnoreCase(type)) {
             pizza = new CheesePizza();
             pizza.setName("cheese");
-        } else if (type.equalsIgnoreCase("greek")) {
+        } else if ("greek".equalsIgnoreCase(type)) {
             pizza = new GreekPizza();
             pizza.setName("greek");
         }

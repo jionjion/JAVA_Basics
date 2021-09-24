@@ -13,10 +13,10 @@ public class NJPizzaMethodFactory extends PizzaMethodFactory{
     public Pizza createPizza(String type){
         Pizza pizza = null;
         System.out.println(type);
-        if (type.equalsIgnoreCase("cheese")) {
+        if ("cheese".equalsIgnoreCase(type)) {
             pizza = new NJCheesePizza();
             pizza.setName("南京 cheese");
-        } else if (type.equalsIgnoreCase("greek")) {
+        } else if ("greek".equalsIgnoreCase(type)) {
             pizza = new NJGreekPizza();
             pizza.setName("南京 greek");
         }

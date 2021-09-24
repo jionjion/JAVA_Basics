@@ -6,7 +6,7 @@ import java.io.File;
 public class FileQuery {
 
 	/**对目录进行遍历*/
-	public static void ListDirectory(File dir) throws Exception {
+	public static void listDirectory(File dir) throws Exception {
 		if (!dir.exists()) {
 			throw new IllegalArgumentException("目录"+dir+"不存在");
 		}
@@ -23,7 +23,7 @@ public class FileQuery {
 		File[] files = dir.listFiles();
 		for (File file : files) {
 			if (file.isDirectory()) {
-				ListDirectory(file);
+				listDirectory(file);
 			}
 		}
 	}
@@ -34,6 +34,6 @@ public class FileQuery {
 	public static void main(String[] args) throws Exception{
 		String directory = "F:\\JAVA_WorkSpace\\JavaBase";
 		File dir = new File(directory);
-		ListDirectory(dir);
+		listDirectory(dir);
 	}
 }

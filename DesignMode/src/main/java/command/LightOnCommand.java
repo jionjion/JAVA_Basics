@@ -17,10 +17,12 @@ public class LightOnCommand implements Command {
         this.lightReceiver = lightReceiver;
     }
 
+    @Override
     public void execute() {
         lightReceiver.on();
     }
 
+    @Override
     public void undo() {
         lightReceiver.off();
     }

@@ -18,12 +18,12 @@ public class SingleExample1 {
     /**
      * 2.创建类实例
      */
-    private final static SingleExample1 instance = new SingleExample1();
+    private final static SingleExample1 INSTANCE = new SingleExample1();
 
     /**
      * 3.提供共有静态方法,返回实例
      */
     public static SingleExample1 getInstance() {
-        return instance;
+        return INSTANCE;
     }
 }

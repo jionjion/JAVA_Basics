@@ -11,13 +11,14 @@ import factory.abs.pizza.Pizza;
 public class NJPizzaMethodFactory implements AbstractPizzaFactory{
 
     /** 接口方法,在该子类中实现. */
+    @Override
     public Pizza createPizza(String type){
         Pizza pizza = null;
         System.out.println(type);
-        if (type.equalsIgnoreCase("cheese")) {
+        if ("cheese".equalsIgnoreCase(type)) {
             pizza = new NJCheesePizza();
             pizza.setName("南京 cheese");
-        } else if (type.equalsIgnoreCase("greek")) {
+        } else if ("greek".equalsIgnoreCase(type)) {
             pizza = new NJGreekPizza();
             pizza.setName("南京 greek");
         }
