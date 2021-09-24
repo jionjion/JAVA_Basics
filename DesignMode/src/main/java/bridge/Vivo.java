@@ -5,6 +5,7 @@ package bridge;
  * @author Jion
  */
 public class Vivo implements Brand {
+    @Override
     public void open() {
         System.out.println("Vivo手机开机...");
     }

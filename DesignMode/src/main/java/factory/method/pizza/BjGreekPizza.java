@@ -5,10 +5,10 @@ package factory.method.pizza;
  *
  * @author Jion
  */
-public class BJGreekPizza extends Pizza {
+public class BjGreekPizza extends Pizza {
 
     @Override
-    public void perpare() {
+    public void prepared() {
         System.out.println("北京的希腊披萨准备原材料");
     }
 }

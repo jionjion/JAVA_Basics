@@ -1,16 +1,14 @@
 package factory.abs.pizza;
 
-import factory.abs.NJPizzaMethodFactory;
-
 /**
  * 北京起司披萨
  *
  * @author Jion
  */
-public class BJCheesePizza extends Pizza {
+public class BjCheesePizza extends Pizza {
 
     @Override
-    public void perpare() {
+    public void prepared() {
         System.out.println("北京的起司披萨准备原材料");
     }
 }

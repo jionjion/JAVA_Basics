@@ -1,7 +1,7 @@
 package factory.method;
 
-import factory.method.pizza.BJCheesePizza;
-import factory.method.pizza.BJGreekPizza;
+import factory.method.pizza.BjCheesePizza;
+import factory.method.pizza.BjGreekPizza;
 import factory.method.pizza.Pizza;
 
 /**
@@ -16,10 +16,10 @@ public class BJPizzaMethodFactory extends PizzaMethodFactory{
         Pizza pizza = null;
         System.out.println(type);
         if ("cheese".equalsIgnoreCase(type)) {
-            pizza = new BJCheesePizza();
+            pizza = new BjCheesePizza();
             pizza.setName("北京 cheese");
         } else if ("greek".equalsIgnoreCase(type)) {
-            pizza = new BJGreekPizza();
+            pizza = new BjGreekPizza();
             pizza.setName("北京 greek");
         }
         return pizza;

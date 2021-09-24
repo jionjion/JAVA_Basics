@@ -8,6 +8,7 @@ public class VoltageAdapter extends Voltage220V implements Voltage5V {
 
 
     /** 适配器方法 */
+    @Override
     public int output5V() {
         // 获得父类方法,并调用
         int output220V = super.output220V();

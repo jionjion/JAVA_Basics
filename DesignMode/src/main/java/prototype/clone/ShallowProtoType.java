@@ -9,7 +9,9 @@ import java.io.Serializable;
  */
 public class ShallowProtoType implements Serializable, Cloneable {
 
-    // 引用类型
+    /**
+     * 引用类型
+     */
     private Sheep sheep;
 
 

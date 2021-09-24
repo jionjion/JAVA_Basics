@@ -16,19 +16,19 @@ public class SingleExample2 {
     }
 
     /** 私有变量 */
-    private final static SingleExample2 instance;
+    private final static SingleExample2 INSTANCE;
 
     /*
      * 2.在静态代码块中创建类实例
      */
     static {
-        instance = new SingleExample2();
+        INSTANCE = new SingleExample2();
     }
 
     /**
      * 3.提供共有静态方法,返回实例
      */
     public static SingleExample2 getInstance() {
-        return instance;
+        return INSTANCE;
     }
 }

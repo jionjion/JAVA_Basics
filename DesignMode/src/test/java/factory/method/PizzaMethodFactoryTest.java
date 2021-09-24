@@ -13,7 +13,7 @@ public class PizzaMethodFactoryTest {
         PizzaMethodFactory factory = new BJPizzaMethodFactory();
         // 北京地区的奶酪披萨
         Pizza cheese = factory.createPizza("cheese");
-        cheese.perpare();
+        cheese.prepared();
         cheese.bake();
         cheese.cut();
         cheese.box();

@@ -12,7 +12,7 @@ public abstract class Pizza {
 
 
     /** 准备披萨,交给子类实现 */
-    public abstract void perpare();
+    public abstract void prepared();
 
     /** 烘烤 */
     public void bake(){

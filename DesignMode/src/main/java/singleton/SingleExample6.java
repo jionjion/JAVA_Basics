@@ -7,5 +7,8 @@ package singleton;
  */
 public enum SingleExample6 {
 
-    INSTANCE;
+    /**
+     * 枚举类中,单例实现
+     */
+    INSTANCE
 }

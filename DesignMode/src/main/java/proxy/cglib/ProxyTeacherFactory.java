@@ -44,6 +44,7 @@ public class ProxyTeacherFactory implements MethodInterceptor {
      * @return 调用方法返回结果
      * @throws Throwable 各种异常
      */
+    @Override
     public Object intercept(Object obj, Method method, Object[] args, MethodProxy methodProxy) throws Throwable {
         System.out.println("代理开始...");
         // 代理方法反射调用,传入源目标类及方法参数

@@ -19,6 +19,7 @@ public class ProxyTeacherFactory {
         return Proxy.newProxyInstance(target.getClass().getClassLoader(),
                 target.getClass().getInterfaces(),
                 new InvocationHandler() {
+                    @Override
                     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
                         System.out.println("代理开始...");
                         Object result = method.invoke(target, args);

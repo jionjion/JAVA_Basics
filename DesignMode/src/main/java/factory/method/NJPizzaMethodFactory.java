@@ -14,10 +14,10 @@ public class NJPizzaMethodFactory extends PizzaMethodFactory{
         Pizza pizza = null;
         System.out.println(type);
         if ("cheese".equalsIgnoreCase(type)) {
-            pizza = new NJCheesePizza();
+            pizza = new NjCheesePizza();
             pizza.setName("南京 cheese");
         } else if ("greek".equalsIgnoreCase(type)) {
-            pizza = new NJGreekPizza();
+            pizza = new NjGreekPizza();
             pizza.setName("南京 greek");
         }
         return pizza;

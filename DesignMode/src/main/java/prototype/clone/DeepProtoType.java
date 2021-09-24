@@ -3,12 +3,15 @@ package prototype.clone;
 import java.io.*;
 
 /**
- *  深拷贝
+ * 深拷贝
+ *
  * @author Jion
  */
 public class DeepProtoType implements Serializable, Cloneable {
 
-    // 引用类型
+    /**
+     * 引用类型
+     */
     private Sheep sheep;
 
     public Sheep getSheep() {
@@ -23,7 +26,9 @@ public class DeepProtoType implements Serializable, Cloneable {
 
     }
 
-    /** 深拷贝, 重写Clone方法 */
+    /**
+     * 深拷贝, 重写Clone方法
+     */
     @Override
     protected Object clone() throws CloneNotSupportedException {
         // 返回对象
@@ -36,7 +41,9 @@ public class DeepProtoType implements Serializable, Cloneable {
         return super.clone();
     }
 
-    /** 深拷贝,通过序列化 */
+    /**
+     * 深拷贝,通过序列化
+     */
     public Object deepClone() throws IOException, ClassNotFoundException {
         // 字节对象
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
