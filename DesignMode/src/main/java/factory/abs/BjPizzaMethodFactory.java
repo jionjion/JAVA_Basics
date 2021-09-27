@@ -2,7 +2,7 @@ package factory.abs;
 
 import factory.abs.pizza.BjCheesePizza;
 import factory.abs.pizza.BjGreekPizza;
-import factory.abs.pizza.Pizza;
+import factory.abs.pizza.AbstractPizza;
 
 /**
  *  抽象工厂方法,实现工厂
@@ -12,8 +12,8 @@ public class BjPizzaMethodFactory implements AbstractPizzaFactory{
 
     /** 接口方法,在该子类中实现. */
     @Override
-    public Pizza createPizza(String type){
-        Pizza pizza = null;
+    public AbstractPizza createPizza(String type){
+        AbstractPizza pizza = null;
         System.out.println(type);
         if ("cheese".equalsIgnoreCase(type)) {
             pizza = new BjCheesePizza();

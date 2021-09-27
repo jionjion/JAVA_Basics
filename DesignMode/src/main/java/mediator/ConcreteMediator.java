@@ -9,10 +9,10 @@ import java.util.HashMap;
  */
 public class ConcreteMediator implements Mediator {
 
-    private final HashMap<String, Colleague> colleagues = new HashMap<>();
+    private final HashMap<String, AbstractColleague> colleagues = new HashMap<>();
 
     @Override
-    public void register(String name, Colleague colleague) {
+    public void register(String name, AbstractColleague colleague) {
         colleagues.put(name, colleague);
     }
 

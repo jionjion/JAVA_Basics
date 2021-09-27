@@ -4,7 +4,7 @@ package strategy;
  *  玩具鸭子
  * @author Jion
  */
-public class ToyDuck extends Duck {
+public class ToyDuck extends BaseDuck {
 
     /** 在构造器中定义具体策略 */
     public ToyDuck(){

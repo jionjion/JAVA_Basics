@@ -6,7 +6,7 @@ package visitor;
  *
  * @author Jion
  */
-public class Fail extends Action {
+public class Fail extends AbstractAction {
 
     @Override
     public void getManResult(Man man) {

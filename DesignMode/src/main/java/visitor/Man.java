@@ -5,7 +5,7 @@ package visitor;
  *
  * @author Jion
  */
-public class Man extends People {
+public class Man extends BasePeople {
 
     public Man(String name) {
         super();
@@ -13,7 +13,7 @@ public class Man extends People {
     }
 
     @Override
-    public void accept(Action action) {
+    public void accept(AbstractAction action) {
         action.getManResult(this);
     }
 }

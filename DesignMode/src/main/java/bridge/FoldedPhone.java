@@ -4,7 +4,7 @@ package bridge;
  *  组合, 折叠手机
  * @author Jion
  */
-public class FoldedPhone extends Phone {
+public class FoldedPhone extends BasePhone {
 
     /** 继承自父类,父类无隐式父类构造器,必须显示调用父类有构造器.传入对象 */
     public FoldedPhone(Brand brand) {

@@ -5,7 +5,7 @@ package factory.method.pizza;
  *
  * @author Jion
  */
-public class BjCheesePizza extends Pizza {
+public class BjCheesePizza extends AbstractPizza {
 
     @Override
     public void prepared() {

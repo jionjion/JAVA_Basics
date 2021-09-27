@@ -5,7 +5,7 @@ package mediator;
  *
  * @author Jion
  */
-public class Tv extends Colleague {
+public class Tv extends AbstractColleague {
 
     public Tv(Mediator mediator, String name) {
         super(mediator, name);

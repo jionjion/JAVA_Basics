@@ -6,13 +6,13 @@ package bridge;
  *
  * @author Jion
  */
-public abstract class Phone {
+public abstract class BasePhone {
 
     /** 桥,一方组合品牌 */
-    private Brand brand;
+    private final Brand brand;
 
     /** 构造器传入,组合 */
-    public Phone(Brand brand){
+    public BasePhone(Brand brand){
         super();
         this.brand = brand;
     }

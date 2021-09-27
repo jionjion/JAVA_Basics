@@ -6,7 +6,7 @@ package visitor;
  *
  * @author Jion
  */
-public class Wait extends Action {
+public class Wait extends AbstractAction {
 
     @Override
     public void getManResult(Man man) {

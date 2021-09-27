@@ -13,27 +13,27 @@ public class ObjectStructures {
     /**
      * 维护集合
      */
-    private final List<People> peoples = new LinkedList<People>();
+    private final List<BasePeople> peoples = new LinkedList<BasePeople>();
 
     /**
      * 增加
      */
-    public void attach(People people) {
+    public void attach(BasePeople people) {
         peoples.add(people);
     }
 
     /**
      * 移除
      */
-    public void detach(People people) {
+    public void detach(BasePeople people) {
         peoples.remove(people);
     }
 
     /**
      * 测试
      */
-    public void dispaly(Action action) {
-        for (People people : peoples) {
+    public void dispaly(AbstractAction action) {
+        for (BasePeople people : peoples) {
             people.accept(action);
         }
     }

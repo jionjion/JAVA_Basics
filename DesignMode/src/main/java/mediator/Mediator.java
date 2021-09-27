@@ -13,7 +13,7 @@ public interface Mediator {
      * @param name      中介名
      * @param colleague 同事类,各种家电子系统
      */
-    void register(String name, Colleague colleague);
+    void register(String name, AbstractColleague colleague);
 
     /**
      * 核心,处理不同家电的发送消息

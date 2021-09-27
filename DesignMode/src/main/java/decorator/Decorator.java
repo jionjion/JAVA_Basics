@@ -5,11 +5,11 @@ package decorator;
  *
  * @author Jion
  */
-public class Decorator extends Drink {
+public class Decorator extends AbstractDrink {
     /** 引入单体咖啡 */
-    private Drink obj;
+    private AbstractDrink obj;
 
-    public Decorator(Drink obj){
+    public Decorator(AbstractDrink obj){
         this.obj = obj;
     }
 

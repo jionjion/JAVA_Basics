@@ -1,6 +1,6 @@
 package factory.abs;
 
-import factory.abs.pizza.Pizza;
+import factory.abs.pizza.AbstractPizza;
 import org.junit.Test;
 
 /**
@@ -12,7 +12,7 @@ public class AbstractPizzaFactoryTest {
     public void createPizza(){
         AbstractPizzaFactory factory = new BjPizzaMethodFactory();
         // 北京地区的奶酪披萨
-        Pizza cheese = factory.createPizza("cheese");
+        AbstractPizza cheese = factory.createPizza("cheese");
         cheese.prepared();
         cheese.bake();
         cheese.cut();

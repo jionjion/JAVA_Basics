@@ -6,7 +6,7 @@ package bridge;
  *
  * @author Jion
  */
-public class TouchPhone extends Phone {
+public class TouchPhone extends BasePhone {
 
     /**
      * 继承自父类,父类无隐式父类构造器,必须显示调用父类有构造器.传入对象

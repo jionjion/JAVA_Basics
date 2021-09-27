@@ -5,7 +5,7 @@ package composite;
  *
  * @author Jion
  */
-public abstract class Organization {
+public abstract class BaseOrganization {
 
     /** 名字 */
     private String name;
@@ -13,19 +13,19 @@ public abstract class Organization {
     /** 说明 */
     private String description;
 
-    public Organization(String name, String description){
+    public BaseOrganization(String name, String description){
         super();
         this.name = name;
         this.description = description;
     }
 
     /** 添加 */
-    protected void add(Organization organization){
+    protected void add(BaseOrganization organization){
 
     }
 
     /** 删除 */
-    protected void remove(Organization organization){
+    protected void remove(BaseOrganization organization){
 
     }
 

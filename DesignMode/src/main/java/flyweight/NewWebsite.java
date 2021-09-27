@@ -5,7 +5,7 @@ package flyweight;
  *
  * @author Jion
  */
-public class NewWebsite extends Website {
+public class NewWebsite extends BaseWebsite {
 
     /**
      * 具体的新闻类别,相似的部分

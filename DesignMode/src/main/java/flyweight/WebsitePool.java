@@ -12,7 +12,7 @@ public class WebsitePool {
     private final HashMap<String, NewWebsite> pool = new HashMap<String, NewWebsite>(10);
 
     /** 获得对象,存在拿去,否则创建返回并存放 */
-    public Website getWebsite(String type){
+    public BaseWebsite getWebsite(String type){
         // 不存在,放入
         if(!pool.containsKey(type)){
             pool.put(type, new NewWebsite(type));

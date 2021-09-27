@@ -1,7 +1,7 @@
 package factory.abs;
 
 
-import factory.abs.pizza.Pizza;
+import factory.abs.pizza.AbstractPizza;
 
 /**
  * 抽象工厂接口,定义相关依赖
@@ -16,5 +16,5 @@ public interface AbstractPizzaFactory {
      * @param type 披萨类型
      * @return 实例结果
      */
-    Pizza createPizza(String type);
+    AbstractPizza createPizza(String type);
 }

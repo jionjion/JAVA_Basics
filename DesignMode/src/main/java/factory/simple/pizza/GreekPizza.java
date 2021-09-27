@@ -5,7 +5,7 @@ package factory.simple.pizza;
  *
  * @author Jion
  */
-public class GreekPizza extends Pizza {
+public class GreekPizza extends AbstractPizza {
 
     @Override
     public void perpare() {

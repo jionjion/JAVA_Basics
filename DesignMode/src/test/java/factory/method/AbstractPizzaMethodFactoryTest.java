@@ -1,18 +1,18 @@
 package factory.method;
 
-import factory.method.pizza.Pizza;
+import factory.method.pizza.AbstractPizza;
 import org.junit.Test;
 
 /**
  * @author Jion
  */
-public class PizzaMethodFactoryTest {
+public class AbstractPizzaMethodFactoryTest {
 
     @Test
     public void createPizza(){
-        PizzaMethodFactory factory = new BJPizzaMethodFactory();
+        AbstractPizzaMethodFactory factory = new BjPizzaMethodFactory();
         // 北京地区的奶酪披萨
-        Pizza cheese = factory.createPizza("cheese");
+        AbstractPizza cheese = factory.createPizza("cheese");
         cheese.prepared();
         cheese.bake();
         cheese.cut();

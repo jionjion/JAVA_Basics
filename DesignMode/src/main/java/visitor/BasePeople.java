@@ -6,12 +6,14 @@ package visitor;
  *
  * @author Jion
  */
-public abstract class People {
+public abstract class BasePeople {
 
     protected String name;
 
     /**
      * 提供方法,让访问者可以访问
+     *
+     * @param action 访问者
      */
-    public abstract void accept(Action action);
+    public abstract void accept(AbstractAction action);
 }

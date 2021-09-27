@@ -5,7 +5,7 @@ package strategy;
  *  定义方法,被子类重写
  * @author Jion
  */
-public abstract class Duck {
+public abstract class BaseDuck {
 
     /** 飞行策略 */
     protected FlyBehavior flyBehavior;

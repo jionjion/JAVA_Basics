@@ -4,7 +4,7 @@ package strategy;
  *  野鸭
  * @author Jion
  */
-public class WildDuck extends Duck {
+public class WildDuck extends BaseDuck {
 
     /** 在构造器中定义具体策略 */
     public WildDuck(){

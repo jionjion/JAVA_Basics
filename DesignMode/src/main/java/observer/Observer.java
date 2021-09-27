@@ -7,7 +7,11 @@ package observer;
  */
 public interface Observer {
 
-    /** 更新方法,传入温度 */
+    /**
+     * 更新方法,传入温度
+     *
+     * @param temperature 温度
+     */
     void update(Float temperature);
 
 }

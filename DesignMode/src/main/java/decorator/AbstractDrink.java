@@ -5,14 +5,22 @@ package decorator;
  *
  * @author Jion
  */
-public abstract class Drink {
-    /** 描述 */
+public abstract class AbstractDrink {
+    /**
+     * 描述
+     */
     private String description;
 
-    /** 价格 */
+    /**
+     * 价格
+     */
     private Double price;
 
-    /** 计算价格方法 */
+    /**
+     * 计算价格方法
+     *
+     * @return 总花费
+     */
     protected abstract Double cose();
 
     public String getDescription() {

@@ -5,7 +5,7 @@ package visitor;
  *
  * @author Jion
  */
-public class Woman extends People {
+public class Woman extends BasePeople {
 
     public Woman(String name) {
         super();
@@ -13,7 +13,7 @@ public class Woman extends People {
     }
 
     @Override
-    public void accept(Action action) {
+    public void accept(AbstractAction action) {
         action.getWoManResult(this);
     }
 }

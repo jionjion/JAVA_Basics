@@ -2,7 +2,7 @@ package factory.old.order;
 
 import factory.old.pizza.CheesePizza;
 import factory.old.pizza.GreekPizza;
-import factory.old.pizza.Pizza;
+import factory.old.pizza.AbstractPizza;
 
 /**
  * 订购披萨
@@ -15,7 +15,7 @@ public class OrderPizza {
      * 订购披萨
      */
     public void order(String type) {
-        Pizza pizza;
+        AbstractPizza pizza;
         System.out.println(type);
         if (type == "cheese") {
             pizza = new CheesePizza();

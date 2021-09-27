@@ -14,15 +14,15 @@ public class WebsiteTest {
 
         // 获得,并存放一个
         User jion = new User("Jion");
-        Website newWebsite = pool.getWebsite("NEW");
+        BaseWebsite newWebsite = pool.getWebsite("NEW");
         newWebsite.use(jion);
         // 再次获得一个
         User arise = new User("Arise");
-        Website musicWebsite = pool.getWebsite("Music");
+        BaseWebsite musicWebsite = pool.getWebsite("Music");
         musicWebsite.use(arise);
         // 重试从缓存中,相同对象,不同调用
         User bom = new User("Bom");
-        Website cacheWebsite = pool.getWebsite("NEW");
+        BaseWebsite cacheWebsite = pool.getWebsite("NEW");
         cacheWebsite.use(bom);
     }
 }

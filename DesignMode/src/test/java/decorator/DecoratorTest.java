@@ -11,7 +11,7 @@ public class DecoratorTest {
     @Test
     public void test(){
         // 1.确定单体咖啡
-        Drink coffee = new LongBlackCoffee();
+        AbstractDrink coffee = new LongBlackCoffee();
         // 尝试..计算价格..=> 5
         System.out.println(coffee.getDescription());
         System.out.println(coffee.cose());

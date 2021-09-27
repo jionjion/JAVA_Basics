@@ -4,7 +4,7 @@ package responsibility;
  *  经理处理
  * @author Jion
  */
-public class ManagerApprover extends Approver {
+public class ManagerApprover extends AbstractApprover {
 
     /**
      * 处理过程

@@ -8,10 +8,10 @@ import java.util.List;
  *
  * @author Jion
  */
-public class University extends Organization {
+public class University extends BaseOrganization {
 
     /** 包含学院, 用抽象类代替学院实现 */
-    private List<Organization> universityList = new ArrayList<Organization>();
+    private List<BaseOrganization> universityList = new ArrayList<BaseOrganization>();
 
     /** 构造器 */
     public University(String name, String description) {
@@ -20,13 +20,13 @@ public class University extends Organization {
 
     /** 添加 */
     @Override
-    protected void add(Organization organization){
+    protected void add(BaseOrganization organization){
         universityList.add(organization);
     }
 
     /** 删除 */
     @Override
-    protected void remove(Organization organization){
+    protected void remove(BaseOrganization organization){
         universityList.remove(organization);
     }
 

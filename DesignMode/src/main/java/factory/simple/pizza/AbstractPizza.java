@@ -1,17 +1,18 @@
-package factory.method.pizza;
+package factory.simple.pizza;
 
 /**
  * 披萨,抽象类
  *
  * @author Jion
  */
-public abstract class Pizza {
+public abstract class AbstractPizza {
 
     /** 披萨类型 */
     protected String name;
 
+
     /** 准备披萨,交给子类实现 */
-    public abstract void prepared();
+    public abstract void perpare();
 
     /** 烘烤 */
     public void bake(){

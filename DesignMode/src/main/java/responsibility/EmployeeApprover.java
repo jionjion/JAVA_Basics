@@ -4,7 +4,7 @@ package responsibility;
  *  员工处理
  * @author Jion
  */
-public class EmployeeApprover extends Approver {
+public class EmployeeApprover extends AbstractApprover {
 
     /**
      * 处理过程

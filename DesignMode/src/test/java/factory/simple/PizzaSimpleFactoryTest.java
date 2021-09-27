@@ -1,6 +1,6 @@
 package factory.simple;
 
-import factory.simple.pizza.Pizza;
+import factory.simple.pizza.AbstractPizza;
 import org.junit.Test;
 
 /**
@@ -13,7 +13,7 @@ public class PizzaSimpleFactoryTest {
     public void createPizza(){
         // 通过工厂模式获得 对象示例
         PizzaSimpleFactory factory = new PizzaSimpleFactory();
-        Pizza pizza = factory.createPizza("cheese");
+        AbstractPizza pizza = factory.createPizza("cheese");
         pizza.perpare();
         pizza.bake();
         pizza.cut();

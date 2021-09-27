@@ -5,15 +5,19 @@ package mediator;
  *
  * @author Jion
  */
-public abstract class Colleague {
+public abstract class AbstractColleague {
 
-    /** 中介类 */
+    /**
+     * 中介类
+     */
     private final Mediator mediator;
 
-    /** 家电名 */
+    /**
+     * 家电名
+     */
     public String name;
 
-    public Colleague(Mediator mediator, String name){
+    public AbstractColleague(Mediator mediator, String name) {
         this.mediator = mediator;
         this.name = name;
     }
@@ -22,6 +26,10 @@ public abstract class Colleague {
         return mediator;
     }
 
-    /** 发送信号 */
+    /**
+     * 发送信号
+     *
+     * @param status 信号
+     */
     public abstract void sendMessage(int status);
 }

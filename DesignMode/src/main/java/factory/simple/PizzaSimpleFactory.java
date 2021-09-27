@@ -2,7 +2,7 @@ package factory.simple;
 
 import factory.simple.pizza.CheesePizza;
 import factory.simple.pizza.GreekPizza;
-import factory.simple.pizza.Pizza;
+import factory.simple.pizza.AbstractPizza;
 
 /**
  * 简单工厂模式
@@ -15,8 +15,8 @@ public class PizzaSimpleFactory {
     /**
      * 根据类型不同,返回不同的子类
      */
-    public Pizza createPizza(String type) {
-        Pizza pizza = null;
+    public AbstractPizza createPizza(String type) {
+        AbstractPizza pizza = null;
         System.out.println(type);
         if ("cheese".equalsIgnoreCase(type)) {
             pizza = new CheesePizza();
