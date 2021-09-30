@@ -8,7 +8,7 @@ package factory.old.pizza;
 public class GreekPizza extends AbstractPizza {
 
     @Override
-    public void perpare() {
+    public void prepared() {
         System.out.println("希腊披萨准备原材料");
     }
 }
