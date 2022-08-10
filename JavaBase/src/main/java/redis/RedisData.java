@@ -1,15 +1,14 @@
 package redis;
 
+import org.apache.commons.pool2.impl.GenericObjectPoolConfig;
+import org.junit.Test;
+import redis.clients.jedis.Jedis;
+import redis.clients.jedis.JedisPool;
+import redis.clients.jedis.ListPosition;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
-
-import org.apache.commons.pool2.impl.GenericObjectPoolConfig;
-import org.junit.Test;
-
-import redis.clients.jedis.BinaryClient;
-import redis.clients.jedis.Jedis;
-import redis.clients.jedis.JedisPool;
 
 /**不同种类的数据保存读取*/
 public class RedisData {
@@ -128,7 +127,7 @@ public class RedisData {
 		jedis.lset("左侧链表", 0, "开始值");
 		jedis.lset("右侧链表", -1,"结束值");
 		//在指定元素前进行插入
-		jedis.linsert("左侧链表",BinaryClient.LIST_POSITION.BEFORE, "元素二", "追加元素");
+		jedis.linsert("左侧链表", ListPosition.BEFORE, "元素二", "追加元素");
 		//将前者链表弹出到后者
 		jedis.rpoplpush("左侧链表", "右侧链表");
 	}
