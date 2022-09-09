@@ -1,4 +1,4 @@
-package flows;
+package flows.countDownLatch;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
