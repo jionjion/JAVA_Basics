@@ -15,11 +15,13 @@ public class SingleExample2 {
 
     }
 
-    /** 私有变量 */
-    private final static SingleExample2 INSTANCE;
+    /**
+     * 私有变量
+     */
+    private static final SingleExample2 INSTANCE;
 
     /*
-     * 2.在静态代码块中创建类实例
+     * 2.在静态代码块中创建类实例, 通过类加载保证唯一性
      */
     static {
         INSTANCE = new SingleExample2();

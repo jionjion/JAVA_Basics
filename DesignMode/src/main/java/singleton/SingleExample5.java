@@ -1,7 +1,7 @@
 package singleton;
 
 /**
- * 静态内部类实现单例模式
+ * 静态内部类实现单例模式, 懒汉性质
  *
  * @author Jion
  */
@@ -14,18 +14,25 @@ public class SingleExample5 {
 
     }
 
-    /** 2.私有变量 */
+    /**
+     * 2.私有变量
+     */
     private static SingleExample5 instance;
 
 
-    /** 3.声明一个静态内部类 */
+    /**
+     * 3.声明一个静态内部类
+     */
     private static class SingleExample5Instance {
         // 类装载机制,在外部类装载完成后.内部类在使用时装载.装载时线程安全.
         private static final SingleExample5 INSTANCE = new SingleExample5();
     }
 
-    /** 4.将静态内部类维护实例返回 */
-    public static SingleExample5 getInstance(){
+    /**
+     * 4.将静态内部类维护实例返回.
+     * 在外部类加载时, 不会初始化, 只有在调用方法时, 才加载内部类, 完成初始化
+     */
+    public static SingleExample5 getInstance() {
         return SingleExample5Instance.INSTANCE;
     }
 
