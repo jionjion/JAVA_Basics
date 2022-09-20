@@ -5,6 +5,7 @@ package thread.exception;
  *
  * @author Jion
  */
+@SuppressWarnings("ALL")
 public class MyUncaughtExceptionHandlerTest {
 
     public static void main(String[] args) {
