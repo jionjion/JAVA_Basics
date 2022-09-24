@@ -5,6 +5,7 @@ package deadlock;
  *
  * @author Jion
  */
+@SuppressWarnings("ALL")
 public class DiningPhilosophers {
 
 
